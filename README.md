@@ -12,6 +12,9 @@
 - running the  virtual environment
 `pipenv shell`
 
+# pip freeze 
+- saying what's installed in the environment
+
 # installing other packages inside the repo
 `pipenv install <name of the package>`
 - when installing with pip only
@@ -27,4 +30,21 @@
 `pipenv install -r requirements.txt`
 
 # deactivating the virtual environment
-`deactivate` 
+`deactivate
+
+# removing virtual env
+`rm -rf <path to the virtyal env>`
+
+2. using different approaches to create virtual environment
+
+# venv
+- creating a virtual environment within a folder
+`python3 -m venv .`
+
+- activating virt. env.
+`source bin/activate`
+
+# virtualenv
+`python3 -m pip install virtualenv`
+- running virt. env.
+`virtualenv -p python3 .`   
