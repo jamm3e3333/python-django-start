@@ -63,7 +63,7 @@ after reopening the repo to start running again:
 
 2. `pipenv install` something like `npm install`
 
-3. `pipenv run python managa.py runserver <port number (8000 by default)>`
+3. `pipenv run python manage.py runserver <port number (8000 by default)>`
 
 ## to fix the errors and sync with the db: 
 `pipenv run python manage.py migrate`
@@ -92,4 +92,9 @@ after reopening the repo to start running again:
 `<class name>.objects.create(<fields to create>)`
 
 # 3 Django backend
-`django-admin startproject myapp`
+- creating another app
+`django-admin startproject <name of the dir> <dir>`
+
+- running the server
+`pipenv run python manage.py runserver`
+
