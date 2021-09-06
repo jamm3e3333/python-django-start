@@ -1,6 +1,6 @@
-1 Initializing repo
+# 1 Initializing repo
 
-## installing pipenv and pi
+## installing pipenv and pip
 `python3 -m pip install pipenv pip --upgrade`
 
 ## initializae repo
@@ -30,12 +30,12 @@
 `pipenv install -r requirements.txt`
 
 ## deactivating the virtual environment
-`deactivate
+`deactivate`
 
 ## removing virtual env
 `rm -rf <path to the virtyal env>`
 
-2 using different approaches to create virtual environment
+# 2 using different approaches to create virtual environment
 
 ## venv
 - creating a virtual environment within a folder
@@ -48,3 +48,48 @@
 `python3 -m pip install virtualenv`
 - running virt. env.
 `virtualenv -p python3 .`   
+
+# 3 starting the django project
+- to create a django project
+
+`django-admin startproject <name of the project > <name of the directory>`
+
+- to run the django app
+
+`python manage.py runserver`
+
+after reopening the repo to start running again:
+1. `pipenv shell` to start the virt. env.
+
+2. `pipenv install` something like `npm install`
+
+3. `pipenv run python managa.py runserver <port number (8000 by default)>`
+
+## to fix the errors and sync with the db: 
+`pipenv run python manage.py migrate`
+
+## creating superuser
+`pipenv run python manage.py createsuperuser`
+
+## creating apps
+`pipenv run python manage.py startapp <name of the app>`
+
+## after changing models.py
+`pipenv run python manage.py makemigrations`
+`pipenv run python manage.py migrate`
+
+## running the python shell
+
+`pipenv run python manage.py shell`
+
+- importing the models in the app
+`from <folder name>.models import <class name of model>`
+
+- querying the data 
+`<class name>.objects.all()`
+
+- creating new data
+`<class name>.objects.create(<fields to create>)`
+
+# 3 Django backend
+`django-admin startproject myapp`
